@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446b51546686467408ac8a2564504b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 6
   grounded: 1
 --- !u!135 &878402865
 SphereCollider:
