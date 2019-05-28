@@ -8,6 +8,7 @@ public class playerMovement : MonoBehaviour
     public bool grounded;
     private Rigidbody rb;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
