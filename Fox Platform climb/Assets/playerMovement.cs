@@ -6,12 +6,12 @@ public class playerMovement : MonoBehaviour
 {
     public float jumpForce;
     public bool grounded;
-    private Rigidbody rb;
-
+    private Rigidbody2D rb;
+    public Animator anim;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         grounded = false;
     }
 
@@ -20,7 +20,8 @@ public class playerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal") * 0.1f;
         //gå fram och bak
-        rb.MovePosition(rb.position + new Vector3(x, 0, 0));
+        anim.SetFloat("Speed",x);
+        rb.MovePosition(rb.position + new Vector2(x, 0));
         //hoppa 
         if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && grounded == true)
         {
